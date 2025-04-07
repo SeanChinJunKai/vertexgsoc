@@ -51,6 +51,12 @@ val model =  GenerativeModel(key = "API_KEY", model = "gemini-1.5-flash-002", Re
 val response: String? = result.response?.text 
 ```
 
+## Try sample app
+
+Try these apps built with this SDK by the community:
+
+- [SeanChinJunKai/VertexSample](https://github.com/SeanChinJunKai/VertexSample): Kotlin Multiplatform sample that uses Gemini via Vertex AI. Runs on Android and iOS.
+
 ## Features of Gemini with Vertex AI supported by this SDK
 | Feature                              | Currently Supported |
 |--------------------------------------|---------------------|
@@ -61,3 +67,15 @@ val response: String? = result.response?.text
 | Multi-turn chat                      | ❌                  |
 | Function calling (tools)             | ❌                  |
 | Count tokens and billable characters | ❌                  |
+
+## Important Note: Not Suitable for Production Use
+
+This library is currently in its initial development stages and is not intended for production use. The following reasons should be considered:
+
+1. **Limited Features:** Not all features of Google’s Gemini via Vertex AI are supported, as outlined in the features table above.
+2. **Lack of Production-Grade Stability:** The SDK has not been extensively tested for large-scale production environments, and the codebase may undergo significant changes in the future.
+3. **Security Considerations:** As this library handles sensitive data such as API keys, proper security and compliance measures may not be fully implemented or sufficient for production systems.
+4. **Performance Constraints:** The performance of this SDK in high-load or real-time production scenarios has not been benchmarked.
+
+If you choose to use this library, it is highly recommended to do so for prototyping, experimentation, or non-critical applications only. For production-grade solutions, consider implementing or integrating rigorously tested alternatives or tools.
+
